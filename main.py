@@ -31,7 +31,7 @@ except:
 def main():
     global gameIndex
     gameIndex += 1
-    print(gameIndex)
+    print("Game " + str(gameIndex))
     fullText = ""
     time.sleep(1)
     hehe = browser.find_elements(By.TAG_NAME, 'button')
