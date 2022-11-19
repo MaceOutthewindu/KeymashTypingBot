@@ -8,6 +8,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
+userName = input("Input your windows username:")
 gameIndex = 0
 randomNumber = 1
 characters = "abcdefghijklmnopqrstuvwxyz"
@@ -16,7 +17,7 @@ link = input("Enter Link:")
 
 option = Options()
 option.add_argument("--disable-infobars")
-option.add_argument("user-data-dir=C:\\Users\\buyev\\AppData\\Local\\Google\\Chrome\\User Data")
+option.add_argument("user-data-dir=C:\\Users\\" + str(userName) + "\\AppData\\Local\\Google\\Chrome\\User Data")
 '''browser = webdriver.Chrome(executable_path='C:/Program Files/Google/Chrome/Application/chromedriver.exe',
                            chrome_options=option)'''
 browser = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=option)
